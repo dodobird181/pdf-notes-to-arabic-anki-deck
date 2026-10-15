@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.poetry]
+package-mode = false
+
+[project]
+name = "pdf-to-anki"
+version = "0.1.0"
+description = "Hand-written PDF notes to Anki conversion"
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "anthropic (>=1.15.0,<2.0.0)",
+    "edge-tts (>=7.3.1,<8.0.0)",
+    "requests (>=2.34.2,<3.0.0)",
+    "pymupdf (>=1.28.2,<2.0.0)",
+    "pillow (>=12.3.0,<13.0.0)"
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
